@@ -1,0 +1,12 @@
+// document.writeln("Hello, Now!")
+const Pads = "1,ABC2,DEF3,GHI4,JKL5,MNO6,PQRS7,TUV8,WXYZ9,*,0,#"
+var rc = -1, pads = Pads.split(","); console.log(pads.length)
+document.writeln("<p><table>");
+for (var row=1; row<=3; row++) {
+    document.write("<tr>")
+    for (var col=1; col<=3; col++) {
+        rc +=1;
+        document.write("<td><button>"+pads[rc].slice(-1)+"</button>");
+    }
+}
+document.writeln("</table>");
